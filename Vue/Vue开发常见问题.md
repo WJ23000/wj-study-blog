@@ -13,16 +13,17 @@
 ```
 
 ## 问题3：img绑定的src找不到图片导致页面渲染异常
-> imgUrlDefault = require("../assets/image/a.png")
-> * 解决方法1：
-> <img :src="item.imgUrl | imgUrlDefault"/>
-> * 解决方法2：
-> <img :src="resetImg(item.imgUrl)"/>
-> resetImg(img){
->>> if(img) {
->>>>> return img
->>> } else {
->>>>> return imgUrlDefault
->>> }
-> }
+```
+imgUrlDefault = require("../assets/image/a.png")
+解决方法1：
+<img :src="item.imgUrl | imgUrlDefault"/>
+解决方法2：
+<img :src="resetImg(item.imgUrl)"/>
+resetImg(img){
+    if(img) {
+        return img
+    } else {
+        return imgUrlDefault
+    }
+}
 ```
