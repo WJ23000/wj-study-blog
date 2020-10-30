@@ -19,11 +19,13 @@ imgUrlDefault = require("../assets/image/a.png")
 <img :src="item.imgUrl | imgUrlDefault"/>
 解决方法2：
 <img :src="resetImg(item.imgUrl)"/>
-resetImg(img){
-    if(img) {
-        return img
+resetImg(imgUrl){
+    if(imgUrl) {
+        return imgUrl
     } else {
         return imgUrlDefault
     }
 }
 ```
+
+## 问题4：
